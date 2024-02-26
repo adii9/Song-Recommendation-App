@@ -20,6 +20,7 @@ submit = st.sidebar.button("Log in with Spotify")
 
 if submit:
     auth_url = sp_oauth.get_authorize_url()
+    print("auth URL -> ", auth_url)
     st.sidebar.write(f'<a href="{auth_url}" target="_self">Log in with Spotify</a>', unsafe_allow_html=True)
 
 # Check if the user has returned from Spotify authentication and entered the code
